@@ -33,6 +33,7 @@ body {
 
 header {
     background-color: #EAC926;
+    padding: 20px;
 }
 
 .logo {
@@ -79,9 +80,40 @@ footer {
     color: #39b54a;
 }
 
+ul {
+    list-style-type: none;
+}
+
 img {
     width: 100%;
 }
 
+.centrar {
+    text-align: center;
+}
+
+/* Navegación en tablets */
+
+@media (max-width: 361px) {
+    .descripcion {
+        display: none;
+    }
+
+    .login-nav, .site-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 361px) {
+    .burger-menu {
+        display: none;
+    }
+}
+
+/* Navegación en desktop */
+
+@media (max-width: 769px) {
+
+}
 
 
