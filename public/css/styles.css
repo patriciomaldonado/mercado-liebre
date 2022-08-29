@@ -135,13 +135,16 @@ main section article i {
     /* top: -15px; */
 }
 
-.precios {
+.div-precios {
     display: flex;
     align-items: flex-start;
     align-items: center;
 }
-.margensito {
+
+.descuentos {
     margin: 0 7px;
+    color: #39b54a;
+    font-size: 16px;
 }
 
 /* .search-box {
@@ -164,6 +167,58 @@ main section article i {
     color: #666;
 }
 
+footer {
+    background-color: #ffffff;
+}
+
+.main-footer {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.footer-div {
+    margin-bottom: 30px;
+}
+
+.main-form {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form-div {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin-top: 5px;
+}
+
+.form-btn {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: #1259c3;
+}
+
+.form-btn2 {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: #1259c3;
+}
+
 /* Navegación en tablets */
 
 
@@ -171,6 +226,13 @@ main section article i {
     .descripcion {
         display: block;
         margin-top: 7px;
+    }
+    .slogan {
+        display: flex;
+        align-items: center;
+    }
+    .main-nav {
+        margin-top: 20px;
     }
 }
 
