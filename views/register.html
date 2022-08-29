@@ -45,81 +45,87 @@ rel="stylesheet" />
         </a>
     </header>
     <main>
-        <section>
+        <section class="main-form">
             <form action="/registro" method="POST">
-                <div>
-                    <label>Nombre y Apellido</label>
-                    <input type="text" name="nombreCompleto">
+                <div class="form-div">
+                    <input class="form-input" type="text" name="nombreCompleto" placeholder="Nombre y Apellido" required>
                 </div>
-                <div>
-                    <label>Nombre de Usuario</label>
-                    <input type="text" name="nombreDeUsuario">
+                <div class="form-div">
+                    <input class="form-input" type="text" name="nombreDeUsuario" placeholder="Nombre de Usuario" required>
                 </div>
-                <div>
+                <div class="form-div">
                     <label>Fecha de Nacimiento</label>
-                    <input type="date" name="fechaNacimiento">
+                    <input class="form-input" type="date" name="fechaNacimiento" required>
                 </div>
-                <div>
-                    <label>domicilio</label>
-                    <input type="text" name="domicilio">
+                <div class="form-div">
+                    <input class="form-input" type="text" name="domicilio" placeholder="Domicilio" required>
                 </div>
-                <div>
-                    <label>Perfil de Usuario</label>
-                    <input type="text" name="perfilUsuario">
+                <div class="form-div">
+                    <p style="margin-bottom: 20px">Perfil de Usuario</p>
+                        <label><input class="form-radio" type="radio" name="perfilUsuario" required>Comprador</label>
+                        <label><input class="form-radio" type="radio" name="perfilUsuario" required>Vendedor</label>
                 </div>
-                <div>
-                    <label>Categorías</label>
-                    <select name="categoria">
-                        <option value="electro">Electro</option>
-                        <option value="hogar">Hogar</option>
-                        <option value="moda">Moda</option>
-                        <option value="jugueteria">Juguetería</option>
-                        <option value="visaSana">Vida sana</option>
-                    </select>
+                <div class="form-div">
+                    <p style="margin-bottom: 20px">Perfil de Usuario</p>
+                        <label>
+                            <input type="checkbox" value="electro">Electro
+                        </label>
+                        <label>
+                            <input type="checkbox" value="hogar">Hogar
+                        </label>
+                        <label>
+                            <input type="checkbox" value="moda">Moda
+                        </label>
+                        <label>
+                            <input type="checkbox" value="jugueteria">Juguetería
+                        </label>
+                        <label>
+                            <input type="checkbox" value="visaSana">Vida sana
+                        </label>
                 </div>
-                <div>
+                <div class="form-div">
                     <label>Foto de Usuario</label>
-                    <input type="file" accept=".png .jpg" name="foto">
+                    <input class="form-input" type="file" accept=".png .jpg" name="foto">
                 </div>
-                <div>
+                <div class="form-div">
                     <label>Contraseña</label>
-                    <input type="password" name="contrasena">
+                    <input class="form-input" type="password" name="contrasena" required>
                 </div>
-                <div>
+                <div class="form-div">
                     <label>Confirmar Contraseña</label>
-                    <input type="password" name="confirmarContrasena">
+                    <input class="form-input" type="password" name="confirmarContrasena" required>
                 </div>
                 <div>
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Borrar</button>
+                    <button class="form-btn2" type="submit">Enviar</button>
+                    <button style="background-color: red;" class="form-btn2" type="reset">Borrar</button>
                 </div>
             </form>
         </section>
     </main>
-    <!-- <footer>
-        <section style="padding: 20px;">
-            <div>
+    <footer>
+        <section class="main-footer">
+            <div class="footer-div">
                 <i class="icon-footer fa-solid fa-credit-card"></i>
                 <h2>Pagá con tarjeta o en efectivo</h2>
                 <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
                     puntos de pago. ¡Y siempre es seguro!</p>
             </div>
-            <div>
+            <div class="footer-div">
                 <i class="icon-footer fa-solid fa-gift"></i>
                 <h2>Envío gratis desde $ 2.500</h2>
                 <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
                     productos. Es un beneficio de Mercado Puntos.</p>
             </div>
-            <div>
+            <div class="footer-div">
                 <i class="icon-footer fa-solid fa-user-shield"></i>
                 <h2>Seguridad, de principio a fin</h2>
                 <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
                     porque estás siempre protegid@.</p>
             </div>
-            <div>
+            <div class="footer-div">
                 <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
             </div>
         </section>
-    </footer> -->
+    </footer>
     
 </body>
