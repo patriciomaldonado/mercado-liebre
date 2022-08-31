@@ -36,24 +36,76 @@ body {
     background-color: #ebebeb;
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #666;
+    margin-left: 12px;
+    font-size: 24px;
+}
+
+.main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.main-header-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-logo {
+    width: 50%;
+}
+
+.search-box {
+    width: 50%;
+}
+
+
+.main-header-top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 header {
     background-color: #EAC926;
     padding: 20px;
 }
 
-.logo {
-    width: 50%;
+.banner {
+    padding-top: 14rem;
 }
 
 article {
     margin: 10px;
     background-color: #ffffff;
+    transition: box-shadow 700ms;
+}
+
+article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.contenedor2 {
+article:hover + .descripcion {
+    display: block;
+}
+
+.main-article {
     border-top: solid 1px #ebebeb;
     padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    position: relative;
 }
 
 .burger-menu {
@@ -66,10 +118,7 @@ article {
     padding: 10px;
     display: block;
     margin: auto;
-}
-
-footer {
-    text-align: center;
+    margin-top: 10px;
 }
 
 .icon-footer {
@@ -77,14 +126,10 @@ footer {
     font-size: 30px;
 }
 
-.articulos {
+/* .articulos {
     background-color: #ebebeb;
     padding: 5px;
-}
-
-.verde {
-    color: #39b54a;
-}
+} */
 
 .main-nav ul {
     list-style-type: none;
@@ -93,10 +138,6 @@ footer {
 }
 
 .main-nav{
-    display: none;
-}
-
-.descripcion {
     display: none;
 }
 
@@ -132,19 +173,34 @@ main section article i {
     border-radius: 50%;
     position: absolute;
     right: 20px;
-    /* top: -15px; */
+    color: #39b54a;
+    top: -15px;
+    transition: transform 700ms;
 }
 
-.div-precios {
-    display: flex;
-    align-items: flex-start;
-    align-items: center;
+main section article i:hover {
+    transform: rotate(-90deg);
 }
 
-.descuentos {
-    margin: 0 7px;
+.precio {
+    font-size: 18px;
+    width: 30%;
+}
+
+.descuento {
     color: #39b54a;
     font-size: 16px;
+    font-weight: normal;
+    width: 70%;
+}
+
+.descripcion {
+    display: none;
+    margin-top: 7px;
+}
+
+.descripcion:hover {
+    display:block;
 }
 
 /* .search-box {
@@ -161,6 +217,8 @@ main section article i {
     padding: 10px;
     border: transparent;
     border-radius: 5px;
+    width: 100%;
+    margin-left: 10px;
 }
 
 .search-btn {
@@ -169,23 +227,28 @@ main section article i {
 
 footer {
     background-color: #ffffff;
+    text-align: center;
 }
 
 .main-footer {
     padding: 20px;
-    max-width: 600px;
+    max-width: 1200px;
     margin: auto;
 }
 
 .footer-div {
-    margin-bottom: 30px;
+    margin: 20px 15px;
+}
+
+.copyright {
+    padding-bottom: 40px;
 }
 
 .main-form {
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 16rem;
     margin-bottom: 30px;
 }
 
@@ -209,6 +272,12 @@ footer {
     border-radius: 5px;
     color: #FFF;
     background-color: #1259c3;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.form-btn:hover {
+    background-color: #0022AA;
 }
 
 .form-btn2 {
@@ -219,20 +288,44 @@ footer {
     background-color: #1259c3;
 }
 
+footer section div h2 {
+    margin-bottom: 10px;
+}
+
+footer section div i {
+    margin-bottom: 10px;
+}
+
+footer section div i:hover {
+    color: #EAC926;
+}
+
 /* Navegación en tablets */
 
 
 @media (min-width: 361px) {
-    .descripcion {
-        display: block;
-        margin-top: 7px;
-    }
     .slogan {
         display: flex;
         align-items: center;
     }
     .main-nav {
         margin-top: 20px;
+    }
+    main section div.articulos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    main section div.articulos article{
+        width: 43%;
+    }
+    .banner {
+        padding-top: 12rem;
+    }
+    .precio, .descuento {
+        width: 50%;
     }
 }
 
@@ -259,6 +352,26 @@ footer {
     }
     .main-nav li {
         margin: 0 5px;
+    }
+    .main-footer {
+        padding-top: 40px;
+        display: flex;
+    }
+    .banner {
+        padding-top: 8rem;
+    }
+    main section div.articulos article{
+        width: 22%;
+    }
+    .link-logo {
+        width: 33%;
+    }
+    
+    .search-box {
+        width: 33%;
+    }
+    .banner {
+        width: 50%;
     }
 }
 
@@ -287,5 +400,8 @@ footer {
     }
     .main-nav {
         margin-top: 30px;
+    }
+    .search-txt {
+        width: 350px;
     }
 }
