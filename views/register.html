@@ -17,10 +17,12 @@ rel="stylesheet" />
 <body>
     <header class="main-header">
         <div class="main-header-top">
-            <a href="/"><img style="display: block;" class="logo" src="/images/logo-mercado-liebre.svg" alt="Logotipo"></a>
-            <div class="search-box">
+            <div class="link-logo">
+                <a href="/"><img style="display: block;" class="logo" src="/images/logo-mercado-liebre.svg" alt="Logotipo"></a>
+            </div>
+            <div class="search-box" action="#" method="GET">
                 <input class="search-txt" type="text" placeholder="Buscar productos, marcas...">
-                <a class="search-btn" type="submit"><i class="fa fa-search"></i></a>
+                <div class="fa fa-search"></div>
             </div>
             <h2 class="slogan">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
@@ -63,25 +65,43 @@ rel="stylesheet" />
                 </div>
                 <div class="form-div">
                     <p style="margin-bottom: 20px">Perfil de Usuario</p>
-                        <label><input class="form-radio" type="radio" name="perfilUsuario" required>Comprador</label>
-                        <label><input class="form-radio" type="radio" name="perfilUsuario" required>Vendedor</label>
+                        <label for="myRadioId" class="radio">
+                            <input id="myRadioId" class="radio-input" type="radio" name="perfilUsuario" required>
+                            <div class="radio-radio"></div>
+                            Comprador
+                        </label>
+                        <label for="myRadioId2" class="radio">
+                            <input id="myRadioId2" class="radio-input" type="radio" name="perfilUsuario" required>
+                            <div class="radio-radio"></div>
+                            Vendedor
+                        </label>
                 </div>
-                <div class="form-div">
+                <div  class="div-checkbox">
                     <p style="margin-bottom: 20px">Perfil de Usuario</p>
-                        <label>
-                            <input type="checkbox" value="electro">Electro
+                        <label class="checkbox" for="myCheckboxId">
+                            <input class="checkbox-input" type="checkbox" id="myCheckboxId" value="electro">
+                            <div class="checkbox-box"></div>
+                            Electro
                         </label>
-                        <label>
-                            <input type="checkbox" value="hogar">Hogar
+                        <label class="checkbox" for="myCheckboxId2">
+                            <input class="checkbox-input" type="checkbox" id="myCheckboxId2" value="hogar">
+                            <div class="checkbox-box"></div>
+                            Hogar
                         </label>
-                        <label>
-                            <input type="checkbox" value="moda">Moda
+                        <label class="checkbox" for="myCheckboxId3">
+                            <input class="checkbox-input" type="checkbox" id="myCheckboxId3" value="moda">
+                            <div class="checkbox-box"></div>
+                            Moda
                         </label>
-                        <label>
-                            <input type="checkbox" value="jugueteria">Juguetería
+                        <label class="checkbox" for="myCheckboxId4">
+                            <input class="checkbox-input" type="checkbox" id="myCheckboxId4" value="jugueteria">
+                            <div class="checkbox-box"></div>
+                            Juguetería
                         </label>
-                        <label>
-                            <input type="checkbox" value="visaSana">Vida sana
+                        <label class="checkbox" for="myCheckboxId5">
+                            <input class="checkbox-input" type="checkbox" id="myCheckboxId5" value="vida-sana">
+                            <div class="checkbox-box"></div>
+                            Vida Sana
                         </label>
                 </div>
                 <div class="form-div">
@@ -96,9 +116,9 @@ rel="stylesheet" />
                     <label>Confirmar Contraseña</label>
                     <input class="form-input" type="password" name="confirmarContrasena" required>
                 </div>
-                <div>
-                    <button class="form-btn2" type="submit">Enviar</button>
-                    <button style="background-color: red;" class="form-btn2" type="reset">Borrar</button>
+                <div class="form-div">
+                    <button class="form-btn" type="submit">Enviar</button>
+                    <button class="form-btn2" type="reset">Borrar</button>
                 </div>
             </form>
         </section>
@@ -125,7 +145,7 @@ rel="stylesheet" />
             </div>
         </section>
         <div class="copyright">
-            <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+            <p>Copyright © 1999-2022 MercadoLiebre S.R.L.</p>
         </div>
     </footer>
     
