@@ -151,11 +151,6 @@ article:hover .descripcion {
     font-size: 30px;
 }
 
-/* .articulos {
-    background-color: #ebebeb;
-    padding: 5px;
-} */
-
 .main-nav ul {
     list-style-type: none;
     padding: 0;
@@ -430,9 +425,15 @@ footer section div i:hover {
     }
 }
 
+@media (max-width: 769px){
+    .slogan {
+        margin-top: 10px;
+    }
+}
+
 /* Navegación en desktop */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .burger-menu {
         display: none;
     }
