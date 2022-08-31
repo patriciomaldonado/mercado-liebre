@@ -51,6 +51,11 @@ h3 {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 100;
+}
+
+input:focus-visible {
+    outline: none;
 }
 
 .main-header-top {
@@ -66,7 +71,27 @@ h3 {
 }
 
 .search-box {
-    width: 50%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0.3rem;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.search-txt {
+    height: 40px;
+    padding: 10px;
+    border: transparent;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.fa {
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 
@@ -81,7 +106,7 @@ header {
 }
 
 .banner {
-    padding-top: 14rem;
+    padding-top: 11rem;
 }
 
 article {
@@ -94,7 +119,7 @@ article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-article:hover + .descripcion {
+article:hover .descripcion {
     display: block;
 }
 
@@ -159,6 +184,13 @@ img {
 
 .slogan {
     font-size: 18px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-left: 18px;
 }
 
 main section article i {
@@ -203,28 +235,6 @@ main section article i:hover {
     display:block;
 }
 
-/* .search-box {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: nowrap;
-} */
-
-.search-txt {
-    height: 40px;
-    padding: 10px;
-    border: transparent;
-    border-radius: 5px;
-    width: 100%;
-    margin-left: 10px;
-}
-
-.search-btn {
-    color: #666;
-}
-
 footer {
     background-color: #ffffff;
     text-align: center;
@@ -248,7 +258,7 @@ footer {
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 16rem;
+    margin-top: 10rem;
     margin-bottom: 30px;
 }
 
@@ -282,10 +292,18 @@ footer {
 
 .form-btn2 {
     padding: 8px;
+    width: 100%;
     border: none;
     border-radius: 5px;
     color: #FFF;
-    background-color: #1259c3;
+    margin-top: 10px;
+    background-color: rgb(255, 66, 66);
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.form-btn2:hover {
+    background-color: #f87685;
 }
 
 footer section div h2 {
@@ -300,13 +318,96 @@ footer section div i:hover {
     color: #EAC926;
 }
 
+/* radio buttons */
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.radio-input {
+    display: none;
+} 
+
+.radio-radio {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #cccccc;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 2px;
+}
+
+.radio-radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #2266dc;
+    border-radius: 50%;
+
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio-input:checked + .radio-radio::after {
+    transform: scale(1);
+}
+
+
+/* checkbox */
+
+.div-checkbox {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.checkbox-input {
+    display: none;
+} 
+
+.checkbox-box {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #cccccc;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.checkbox-box::after{
+    content: '\2714';
+    color: #ffffff;
+}
+
+.checkbox-input:checked +.checkbox-box {
+    background: #2266dc;
+    border-color: #2266dc;
+}
+
+
 /* Navegación en tablets */
 
 
 @media (min-width: 361px) {
     .slogan {
         display: flex;
-        align-items: center;
     }
     .main-nav {
         margin-top: 20px;
@@ -322,7 +423,7 @@ footer section div i:hover {
         width: 43%;
     }
     .banner {
-        padding-top: 12rem;
+        padding-top: 10rem;
     }
     .precio, .descuento {
         width: 50%;
@@ -337,11 +438,15 @@ footer section div i:hover {
     }
     .main-header-top {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-wrap: nowrap;
     }
     .slogan {
-        max-width: 350px;
+        max-width: 360px;
         text-align: right;
+        width: 50%;
+        margin-left: 20px;
+        margin-right: 0;
     }
     .main-nav {
         display: flex;
@@ -370,8 +475,8 @@ footer section div i:hover {
     .search-box {
         width: 33%;
     }
-    .banner {
-        width: 50%;
+    .slogan {
+        width: 33%;
     }
 }
 
@@ -392,7 +497,7 @@ footer section div i:hover {
     .slogan {
         margin: 0;
         max-width: none;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 400;
     }
     .logo {
