@@ -120,7 +120,7 @@ article:hover {
 }
 
 article:hover .descripcion {
-    display: block;
+    visibility: visible;
 }
 
 .main-article {
@@ -222,7 +222,7 @@ main section article i:hover {
 }
 
 .descripcion {
-    display: none;
+    visibility: hidden;
     margin-top: 7px;
 }
 
