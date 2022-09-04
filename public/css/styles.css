@@ -119,9 +119,6 @@ article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-article:hover .descripcion {
-    visibility: visible;
-}
 
 .main-article {
     border-top: solid 1px #ebebeb;
@@ -219,15 +216,6 @@ main section article i:hover {
     font-size: 16px;
     font-weight: normal;
     width: 70%;
-}
-
-.descripcion {
-    visibility: hidden;
-    margin-top: 7px;
-}
-
-.descripcion:hover {
-    display:block;
 }
 
 footer {
@@ -478,6 +466,13 @@ footer section div i:hover {
     }
     .slogan {
         width: 33%;
+    }
+    article:hover .descripcion {
+        visibility: visible;
+    }
+    .descripcion {
+        visibility: hidden;
+        margin-top: 7px;
     }
 }
 
